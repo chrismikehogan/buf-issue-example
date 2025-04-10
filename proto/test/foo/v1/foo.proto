@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package test.foo.v1;
+
+option go_package = "test/foov1";
+
+message Foo {}

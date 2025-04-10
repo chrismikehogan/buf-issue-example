@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package test.ping.v1;
+
+option go_package = "test/pingv1";
+
+import "test/foo/v1/foo.proto";
+
+service PingService { rpc Ping(PingRequest) returns (PingResponse); }
+
+message PingRequest {}
+
+message PingResponse { test.foo.v1.Foo foo = 1; }
